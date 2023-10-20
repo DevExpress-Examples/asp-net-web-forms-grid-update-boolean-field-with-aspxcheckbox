@@ -8,7 +8,7 @@
 **[[Run Online]](https://codecentral.devexpress.com/e2313/)**
 <!-- run online end -->
 
-This example demonstrates how to use [ASPxCheckBox](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxCheckBox) to perform inline editing for boolean-type fields in [DataItemTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.DataItemTemplate).
+This example demonstrates how to use [ASPxCheckBox](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxCheckBox) to implement inline editing for boolean-type fields in [DataItemTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.DataItemTemplate).
 
 ![](checkbox-in-grid.png)
 
