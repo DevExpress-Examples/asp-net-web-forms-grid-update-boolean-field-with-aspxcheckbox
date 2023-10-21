@@ -12,7 +12,7 @@ This example demonstrates how to use [ASPxCheckBox](https://docs.devexpress.com/
 
 ![](checkbox-in-grid.png)
 
-The example uses XPO for demonstration purposes only. To use the example with real databases, modify the [ASPxCallback.Callback](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxCallback.Callback) event handler where update the required record in the "UPDATE" query.
+The example uses XPO for demonstration purposes only. To use the example with real databases, modify the [ASPxCallback.Callback](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxCallback.Callback) event handler where you update the required record in the "UPDATE" query.
 
 ## Files to Review
 
