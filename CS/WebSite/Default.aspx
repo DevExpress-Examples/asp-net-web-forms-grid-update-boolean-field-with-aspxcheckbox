@@ -16,7 +16,7 @@
         <dx:ASPxGridView ID="grid" runat="server" AutoGenerateColumns="False" DataSourceID="xds"
             KeyFieldName="Oid">
             <Columns>
-                <dx:GridViewDataTextColumn FieldName="Oid" RSortOrder="Ascending" />
+                <dx:GridViewDataTextColumn FieldName="Oid" SortOrder="Ascending" />
                 <dx:GridViewDataTextColumn FieldName="Title"  />
                 <dx:GridViewDataCheckColumn FieldName="Active" >
                     <DataItemTemplate>
