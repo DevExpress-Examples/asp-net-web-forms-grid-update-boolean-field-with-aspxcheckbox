@@ -5,9 +5,6 @@
 <!-- default badges end -->
 
 # Grid View for ASP.NET Web Forms - How to use ASPxCheckBox to update a Boolean field in a DataItem template
-<!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/128532108/)**
-<!-- run online end -->
 
 This example demonstrates how to use [ASPxCheckBox](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxCheckBox) to implement inline editing for boolean-type fields in [DataItemTemplate](https://docs.devexpress.com/AspNet/DevExpress.Web.GridViewDataColumn.DataItemTemplate).
 
