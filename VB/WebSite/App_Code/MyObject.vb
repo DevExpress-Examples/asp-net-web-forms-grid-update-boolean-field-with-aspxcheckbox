@@ -1,9 +1,9 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports DevExpress.Xpo
 
 Public Class MyObject
 	Inherits XPObject
+
 	Public Sub New()
 		MyBase.New()
 	End Sub
@@ -26,13 +26,14 @@ Public Class MyObject
 		End Set
 	End Property
 
-	Private active_Renamed As Boolean
+'INSTANT VB NOTE: The field active was renamed since Visual Basic does not allow fields to have the same name as other class members:
+	Private active_Conflict As Boolean
 	Public Property Active() As Boolean
 		Get
-			Return active_Renamed
+			Return active_Conflict
 		End Get
 		Set(ByVal value As Boolean)
-			SetPropertyValue("Active", active_Renamed, value)
+			SetPropertyValue("Active", active_Conflict, value)
 		End Set
 	End Property
 End Class

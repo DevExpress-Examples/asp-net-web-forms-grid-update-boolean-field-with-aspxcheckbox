@@ -1,5 +1,4 @@
-Imports Microsoft.VisualBasic
-Imports System
+﻿Imports System
 Imports System.Data
 Imports System.Configuration
 Imports System.Web
@@ -15,25 +14,23 @@ Imports DevExpress.Xpo.Metadata
 ''' <summary>
 ''' Summary description for XpoHelper
 ''' </summary>
-Public NotInheritable Class XpoHelper
-	Private Sub New()
-	End Sub
-	Shared Sub New()
+Public Module XpoHelper
+	Sub New()
 		CreateDefaultObjects()
 	End Sub
 
-	Public Shared Function GetNewSession() As Session
+	Public Function GetNewSession() As Session
 		Return New Session(DataLayer)
 	End Function
 
-	Public Shared Function GetNewUnitOfWork() As UnitOfWork
+	Public Function GetNewUnitOfWork() As UnitOfWork
 		Return New UnitOfWork(DataLayer)
 	End Function
 
-	Private ReadOnly Shared lockObject As Object = New Object()
+	Private ReadOnly lockObject As New Object()
 
-	Private Shared fDataLayer As IDataLayer
-	Private Shared ReadOnly Property DataLayer() As IDataLayer
+	Private fDataLayer As IDataLayer
+	Private ReadOnly Property DataLayer() As IDataLayer
 		Get
 			If fDataLayer Is Nothing Then
 				SyncLock lockObject
@@ -44,7 +41,7 @@ Public NotInheritable Class XpoHelper
 		End Get
 	End Property
 
-	Private Shared Function GetDataLayer() As IDataLayer
+	Private Function GetDataLayer() As IDataLayer
 		XpoDefault.Session = Nothing
 
 		Dim ds As New InMemoryDataStore()
@@ -54,7 +51,7 @@ Public NotInheritable Class XpoHelper
 		Return New ThreadSafeDataLayer(dict, ds)
 	End Function
 
-	Private Shared Sub CreateDefaultObjects()
+	Private Sub CreateDefaultObjects()
 		Using uow As UnitOfWork = GetNewUnitOfWork()
 			Dim obj As New MyObject(uow)
 			obj.Title = "Test1"
@@ -75,4 +72,4 @@ Public NotInheritable Class XpoHelper
 			uow.CommitChanges()
 		End Using
 	End Sub
-End Class
+End Module
